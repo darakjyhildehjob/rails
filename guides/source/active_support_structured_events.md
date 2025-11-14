@@ -57,8 +57,6 @@ Structured events fix these problems:
 
 They also unify **business events** and **developer observability events** behind a single API.
 
----
-
 Reporting Events
 ----------------
 
@@ -111,8 +109,6 @@ For details:
 
 * **[Debug Events][]**
 
----
-
 Subscribers
 -----------
 
@@ -142,8 +138,6 @@ See:
 * **[Subscribers][]**
 * **[Filtered Subscriptions[]**
 
----
-
 Tags
 ----
 
@@ -167,8 +161,6 @@ See:
 
 * **[Tags][]**
 
----
-
 Context
 -------
 
@@ -189,8 +181,6 @@ context: { request_id: "abcd123" }
 For custom stores and behavior:
 
 * **[Context Store][]**
-
----
 
 Relationship to ActiveSupport::Notifications
 --------------------------------------------
@@ -224,8 +214,6 @@ Although both systems relate to what happens inside the application, they solve 
 
 Framework components such as Action Controller, Active Record, Active Job, and others use structured subscribers to convert internal instrumentation into structured events.
 
----
-
 Structured Event Subscribers
 ----------------------------
 
@@ -255,8 +243,6 @@ Key behaviors:
 
 These subscribers form the backbone of Rails' built-in events.
 
----
-
 Security
 --------
 
@@ -277,10 +263,6 @@ Hash-based payloads are filtered automatically using [`config.filter_parameters`
 [`config.filter_parameters`]: https://guides.rubyonrails.org/configuring.html#config-filter-parameters
 [ActiveSupport::ParameterFilter]: https://api.rubyonrails.org/classes/ActiveSupport/ParameterFilter.html
 
-
-
-
----
 
 Framework Hooks (Structured Events Emitted by Rails)
 ----------------------------------------------------
@@ -326,7 +308,7 @@ Rails emits structured events across the framework covering controllers, jobs, d
 | `:filename`    | Name of the file being sent         |
 | `:duration_ms` | Total duration of the request in ms |
 
-####  `action_controller.redirected`
+#### `action_controller.redirected`
 
 | Key          | Value                                    |
 | ------------ | ---------------------------------------- |
